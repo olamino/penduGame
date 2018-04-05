@@ -1,0 +1,14 @@
+{
+    "maxMistake" : 4, 
+    "messageWin" : "You have won perfect !",
+    "messageLost" : "You lost !",
+    "words" : [
+        "yellow", 
+        "party", 
+        "filing", 
+        "label", 
+        "word", 
+        "paris", 
+        "javascript"
+    ]
+}

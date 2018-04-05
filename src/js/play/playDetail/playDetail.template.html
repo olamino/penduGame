@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <div ng-if="play.endGame">
+          <div class="message-text" ng-class="play.win ? 'win-game' : 'lost-game'" >{{play.message}}</div>
+          <button type="button" id="play-btn" ng-click="play.startPlay()" class="btn btn-primary">
+                <span class="glyphicon glyphicon-play"></span>
+          </button>
+    </div>
+    <div ng-if="!play.win">
+          <span class="counter" ng-if="!play.lost">{{play.counter}} / {{play.maxTry}}</span>
+    </div>
+    <div class="word-content" ng-class="{'win-game':play.win}">
+          {{play.generatedWord|playfilter:play.letters}}
+    </div>
+    <ul class="keyboard" ng-if="play.showletters">
+        <li
+            ng-repeat="letter in play.letters" 
+            ng-class="{'disabled':letter.isClicked == true}" 
+            ng-click="play.clickedKey(letter);" >
+            {{letter.label}}
+        </li>
+    </ul>
+</div>
